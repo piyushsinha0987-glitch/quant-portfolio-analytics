@@ -62,7 +62,7 @@ Quant-Portfolio-Analytics
 ├── Data
 │   └── stocks.csv
 │
-├── src
+├── SRC
 │   ├── main.py
 │   ├── monte_carlo.py
 │   ├── optimizers.py
