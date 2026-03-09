@@ -110,6 +110,22 @@ Max Drawdown: -21.01%
 Calmar Ratio: -0.18
 
 
+## How to Run
+
+1. Clone the repository
+
+git clone https://github.com/piyushsinha0987-glitch/quant-portfolio-analytics.git
+
+2. Install dependencies
+
+pip install -r requirements.txt
+
+3. Run the simulation
+
+python SRC/main.py
+
+4. Results will be saved in the results/ folder
+
 ## Future Improvements
 
 - Add Sortino Ratio
