@@ -97,6 +97,19 @@ It demonstrates portfolio construction, risk measurement, and Monte Carlo simula
 
 ---
 
+## Portfolio Risk Statistics Example
+
+Example output from the simulation:
+
+Expected Return: -3.83%  
+Volatility: 27.40%  
+Sharpe Ratio: -0.21  
+VaR (95%): -2.87%  
+CVaR (95%): -3.73%  
+Max Drawdown: -21.01%  
+Calmar Ratio: -0.18
+
+
 ## Future Improvements
 
 - Add Sortino Ratio
