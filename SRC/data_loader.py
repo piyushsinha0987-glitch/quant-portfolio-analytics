@@ -1,10 +1,14 @@
 import pandas as pd
+import yfinance as yf
 
+
+# ==============================
+# Load Portfolio Symbols
+# ==============================
 
 def get_portfolio_data():
-
     """
-    Load portfolio holdings from CSV file
+    Load portfolio holdings from CSV file.
     """
 
     try:
@@ -16,3 +20,25 @@ def get_portfolio_data():
         )
 
     return portfolio_df
+
+
+# ==============================
+# Download Market Data
+# ==============================
+
+def load_market_data(tickers, start="2020-01-01", end="2024-01-01"):
+    """
+    Download historical price data using yfinance
+    and convert to daily returns.
+    """
+
+    data = yf.download(
+        tickers,
+        start=start,
+        end=end,
+        progress=False
+    )["Adj Close"]
+
+    returns = data.pct_change().dropna()
+
+    return returns

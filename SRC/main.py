@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import scipy.stats as stats
 
-from data_loader import get_portfolio_data
+from data_loader import get_portfolio_data, load_market_data
 from optimizers import min_variance_weights, risk_parity_weights, max_drawdown
 from monte_carlo import simulate_joint_returns
 
@@ -44,7 +44,11 @@ def main():
 
     merged_df = pd.merge(portfolio_df, stocks_df, on="Symbol")
 
-    symbols = merged_df["Symbol"].values
+    # Extract tickers
+    symbols = merged_df["Symbol"].tolist()
+
+    # Download market data
+    returns_df = load_market_data(symbols)
 
     # ==============================
     # Monte Carlo Simulation
