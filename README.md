@@ -34,7 +34,7 @@ The project computes key portfolio risk metrics used in quantitative asset manag
 
 ---
 
-## Example Output
+## Example Output & Risk Visualizations
 
 ### Efficient Frontier
 
