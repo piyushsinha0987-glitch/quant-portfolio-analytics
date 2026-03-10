@@ -1,4 +1,7 @@
 # Quant Portfolio Analytics with Monte Carlo Simulation
+![Python](https://img.shields.io/badge/python-3.x-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Status](https://img.shields.io/badge/project-active-success)
 
 This project builds a quantitative portfolio analytics engine in Python to simulate asset returns, construct optimized portfolios, and evaluate portfolio risk using institutional performance metrics.
 
@@ -52,7 +55,11 @@ The project computes key portfolio risk metrics used in quantitative asset manag
 
 ![Portfolio Growth](results/portfolio_growth.png)
 
+### Rolling Volatility
+
 ![Rolling Volatility](results/rolling_volatility.png)
+
+### Rolling Sharpe Ratio
 
 ![Rolling Sharpe](results/rolling_sharpe.png)
 ---
@@ -99,6 +106,19 @@ The goal of this project is to build a research-style portfolio analytics framew
 It demonstrates portfolio construction, risk measurement, and Monte Carlo simulation techniques commonly used in quantitative finance.
 
 ---
+## Research Summary
+
+This project implements a Monte Carlo based portfolio analytics framework to evaluate portfolio risk under heavy-tailed return distributions.
+
+Asset returns are simulated using a multivariate Student-t distribution to better capture fat-tail risk observed in financial markets.
+
+Portfolio construction methods evaluated:
+
+- Minimum Variance Portfolio
+- Risk Parity Portfolio
+- Equal Weight Benchmark
+
+The simulation framework allows comparison of portfolio performance using institutional risk metrics such as Sharpe Ratio, Value-at-Risk (VaR), Conditional VaR, and Maximum Drawdown.
 
 ## Portfolio Risk Statistics Example
 
@@ -122,6 +142,22 @@ Market data is retrieved using the yfinance Python library from Yahoo Finance.
 The project automatically downloads historical prices for the tickers listed in `Data/stocks.csv`.
 
 ---
+## Sample Portfolio
+
+The example portfolio used in this project consists of a small basket of equities for demonstration purposes.
+
+Tickers are stored in:
+
+Data/stocks.csv
+
+Example:
+
+Reliance
+HDFC
+Infosys
+Wipro
+
+The system automatically downloads historical price data and computes portfolio returns for simulation.
 
 ## How to Run
 
