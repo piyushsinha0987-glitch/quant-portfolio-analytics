@@ -40,28 +40,23 @@ The project computes key portfolio risk metrics used in quantitative asset manag
 ## Example Output & Risk Visualizations
 
 ### Efficient Frontier
-
 ![Efficient Frontier](results/efficient_frontier.png)
 
 ### Sharpe Ratio Distribution
-
 ![Sharpe Distribution](results/sharpe_distribution.png)
 
 ### Portfolio Drawdown
-
 ![Drawdown](results/drawdown.png)
 
 ### Portfolio Growth
-
 ![Portfolio Growth](results/portfolio_growth.png)
 
 ### Rolling Volatility
-
 ![Rolling Volatility](results/rolling_volatility.png)
 
 ### Rolling Sharpe Ratio
-
 ![Rolling Sharpe](results/rolling_sharpe.png)
+
 ---
 
 ## Project Structure
@@ -82,7 +77,9 @@ Quant-Portfolio-Analytics
 │   ├── efficient_frontier.png
 │   ├── sharpe_distribution.png
 │   ├── drawdown.png
-│   └── portfolio_growth.png
+│   ├── portfolio_growth.png
+│   ├── rolling_volatility.png
+│   └── rolling_sharpe.png
 │
 └── README.md
 ```
@@ -106,11 +103,12 @@ The goal of this project is to build a research-style portfolio analytics framew
 It demonstrates portfolio construction, risk measurement, and Monte Carlo simulation techniques commonly used in quantitative finance.
 
 ---
+
 ## Research Summary
 
 This project implements a Monte Carlo based portfolio analytics framework to evaluate portfolio risk under heavy-tailed return distributions.
 
-Asset returns are simulated using a multivariate Student-t distribution to better capture fat-tail risk observed in financial markets.
+Asset returns are simulated using a **multivariate Student-t distribution** to better capture fat-tail risk observed in financial markets.
 
 Portfolio construction methods evaluated:
 
@@ -118,7 +116,9 @@ Portfolio construction methods evaluated:
 - Risk Parity Portfolio
 - Equal Weight Benchmark
 
-The simulation framework allows comparison of portfolio performance using institutional risk metrics such as Sharpe Ratio, Value-at-Risk (VaR), Conditional VaR, and Maximum Drawdown.
+The simulation framework allows comparison of portfolio performance using institutional risk metrics such as **Sharpe Ratio, Value-at-Risk (VaR), Conditional VaR, and Maximum Drawdown.**
+
+---
 
 ## Portfolio Risk Statistics Example
 
@@ -130,34 +130,40 @@ Sharpe Ratio: -0.21
 VaR (95%): -2.87%  
 CVaR (95%): -3.73%  
 Max Drawdown: -21.01%  
-Calmar Ratio: -0.18
-
+Calmar Ratio: -0.18  
 
 ---
 
 ## Data Source
 
-Market data is retrieved using the yfinance Python library from Yahoo Finance.
+Market data is retrieved using the **yfinance** Python library from Yahoo Finance.
 
 The project automatically downloads historical prices for the tickers listed in `Data/stocks.csv`.
 
 ---
+
 ## Sample Portfolio
 
 The example portfolio used in this project consists of a small basket of equities for demonstration purposes.
 
 Tickers are stored in:
 
+```
 Data/stocks.csv
+```
 
 Example:
 
+```
 Reliance
 HDFC
 Infosys
 Wipro
+```
 
 The system automatically downloads historical price data and computes portfolio returns for simulation.
+
+---
 
 ## How to Run
 
@@ -184,3 +190,10 @@ Run the analytics engine:
 ```bash
 python src/main.py
 ```
+
+---
+
+## ⭐ Support the Project
+
+If you found this project useful or interesting, please consider **starring the repository** on GitHub.  
+It helps others discover the project and supports future development.
