@@ -62,7 +62,7 @@ Quant-Portfolio-Analytics
 ├── Data
 │   └── stocks.csv
 │
-├── SRC
+├── src
 │   ├── main.py
 │   ├── monte_carlo.py
 │   ├── optimizers.py
@@ -110,25 +110,38 @@ Max Drawdown: -21.01%
 Calmar Ratio: -0.18
 
 
+---
+
+## Data Source
+
+Market data is retrieved using the yfinance Python library from Yahoo Finance.
+
+The project automatically downloads historical prices for the tickers listed in `Data/stocks.csv`.
+
+---
+
 ## How to Run
 
-1. Clone the repository
+Clone the repository:
 
+```bash
 git clone https://github.com/piyushsinha0987-glitch/quant-portfolio-analytics.git
+```
 
-2. Install dependencies
+Navigate to the project folder:
 
+```bash
+cd quant-portfolio-analytics
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
 
-3. Run the simulation
+Run the analytics engine:
 
-python SRC/main.py
-
-4. Results will be saved in the results/ folder
-
-## Future Improvements
-
-- Add Sortino Ratio
-- Rolling volatility analysis
-- Rolling Sharpe ratio
-- Additional Monte Carlo simulation methods
+```bash
+python src/main.py
+```
