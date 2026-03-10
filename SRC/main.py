@@ -275,6 +275,35 @@ def main():
     plt.savefig("../results/portfolio_growth.png", dpi=300)
     plt.show()
 
+    # ==============================
+    # Rolling Risk Analytics
+    # ==============================
+
+    rolling_vol = portfolio_returns.rolling(30).std() * np.sqrt(252)
+
+    rolling_sharpe = (
+    portfolio_returns.rolling(30).mean() * 252
+    ) / (portfolio_returns.rolling(30).std() * np.sqrt(252))
+
+    # Rolling Volatility Plot
+    plt.figure(figsize=(10,6))
+    plt.plot(rolling_vol)
+    plt.title("Rolling Volatility (1 Year)")
+    plt.xlabel("Time")
+    plt.ylabel("Volatility")
+    plt.grid(True, alpha=0.3)
+    plt.savefig("../results/rolling_volatility.png")
+    plt.show()
+
+    # Rolling Sharpe Plot
+    plt.figure(figsize=(10,6))
+    plt.plot(rolling_sharpe)
+    plt.title("Rolling Sharpe Ratio (1 Year)")
+    plt.xlabel("Time")
+    plt.ylabel("Sharpe Ratio")
+    plt.grid(True, alpha=0.3)
+    plt.savefig("../results/rolling_sharpe.png")
+    plt.show()
 
 # ==============================
 # Run Program
