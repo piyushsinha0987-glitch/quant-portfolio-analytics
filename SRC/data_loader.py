@@ -27,18 +27,20 @@ def get_portfolio_data():
 # ==============================
 
 def load_market_data(tickers, start="2020-01-01", end="2024-01-01"):
-    """
-    Download historical price data using yfinance
-    and convert to daily returns.
-    """
 
     data = yf.download(
         tickers,
         start=start,
         end=end,
         progress=False
-    )["Adj Close"]
+    )
 
-    returns = data.pct_change().dropna()
+    # Handle both cases: Adj Close or Close
+    if "Adj Close" in data.columns:
+        prices = data["Adj Close"]
+    else:
+        prices = data["Close"]
+
+    returns = prices.pct_change().dropna()
 
     return returns
