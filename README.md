@@ -52,6 +52,9 @@ The project computes key portfolio risk metrics used in quantitative asset manag
 
 ![Portfolio Growth](results/portfolio_growth.png)
 
+![Rolling Volatility](results/rolling_volatility.png)
+
+![Rolling Sharpe](results/rolling_sharpe.png)
 ---
 
 ## Project Structure
